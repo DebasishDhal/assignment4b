@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int fibionacci(int n);
+int main()
+{
+int n;
+cout<<"enter a number to find the corresponding fibionnaci number"<<endl;
+cin>>n;
+cout<<"the "<<n<<"th fibionacci term is"<<fibionacci(n)<<endl;
+return 0;
+}
+int fibionacci(int n)
+{
+if((n==1)||(n==2))
+return 1; 
+else
+return (fibionacci(n-1)+fibionacci(n-2));
+}
