@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int findhcf(int,int,int,int);
+int main()
+{
+int a,b;
+cout<<"enter two numbersin ascending order to find their hcf "<<endl;
+cin>>a>>b;
+cout<<"the hcf of the two number is "<<findhcf(a,b,1,1)<<endl;
+return 0;
+}
+int findhcf(int a,int b,int c,int x)
+{
+if(c==a+1)
+{
+return x;
+}
+else
+{
+if((a%c==0) && (b%c==0))
+{
+x=c;
+}
+findhcf(a,b,c+1,x);
+}
+}
