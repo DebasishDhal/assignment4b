@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int maxandmin(int a[],int max,int min,int start);
+int main()
+{
+int a[10];
+for(int i=0;i<10;i++)
+{
+cout<<"enter "<<i+1<<"th element"<<endl;
+cin>>a[i];
+}
+cout<<"the max and min out of all array elements are"<<maxandmin(a,0,0,0)<<" respectievely"<<endl;
+return 0;
+}
+int maxandmin(int a[],int max,int min,int start)
+{
+if(start==10)
+{
+return max;
+return min;
+}
+else
+{
+if(a[start]>max)
+max=a[start];
+if(a[start]<min)
+min=a[start];
+maxandmin(a,max,min,start+1);
+}
+}
