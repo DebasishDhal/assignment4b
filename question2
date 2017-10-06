@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int printnumber(int);
+int main()
+{
+int n;
+cout<<"enter a number to print all numbers between 1-n"<<endl;
+cin>>n;
+printnumber(n);
+return 0;
+}
+int printnumber(int n)
+{
+if(n!=0)
+{
+cout<<n<<endl;
+return printnumber(n-1);
+}
+else return 1;
+}
