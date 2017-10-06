@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int sumofodd(int a,int b,int sum=0);
+int main()
+{
+int a,b;
+cout<<"enter a range with lower range first to find out sum of all odd no.between it"<<endl;
+cin>>a>>b;
+cout<<"the required sum is"<<sumofodd(a,b,0)<<endl;
+return 0;
+}
+int sumofodd(int a,int b,int sum)
+{
+if(a%2==0)
+{
+while(a<b)
+{
+sum=sum+a+1;
+sumofodd(a+2,b,sum);
+}
+return sum; 
+}
+else
+{
+while(a<=b)
+{
+sum=sum+a;
+sumofodd(a+2,b,sum);
+}
+return sum;
+}
+}
