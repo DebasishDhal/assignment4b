@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int lcm(int,int,int);
+int main(){
+int a,b;
+cout<<"enter two numbers in ascending order  to find it's lcm"<<endl;
+cin>>a>>b;
+cout<<"the lcm is "<<lcm(a,b,1)<<endl;
+return 0;
+}
+int lcm(int a,int b,int c)
+{
+if((c%a==0)&&(c%b==0))
+return c;
+else
+lcm(a,b,c+1);
+}
