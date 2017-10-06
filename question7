@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int rev,a;
+int reverse(int n);
+int main()
+{
+int n;
+cout<<"enter a number to check if it's palindromic or not"<<endl;
+cin>>n;
+int a=n;
+int result=reverse(n);
+if(result==a)
+cout<<a<<" is palindromic"<<endl;
+else
+cout<<a<<"is not palindromic"<<endl;
+return 0;
+}
+int reverse(int n)
+{
+if(n!=0)
+{
+a=n%10;
+rev=rev*10+a;
+reverse(n/10);
+}
+else
+return rev;
+} 
